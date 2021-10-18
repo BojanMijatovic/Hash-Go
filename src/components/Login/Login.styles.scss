@@ -1,0 +1,65 @@
+@import '../../style/core/reset';
+@import '../../style/core/variables';
+.login {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 2rem;
+    background: $background-gray-color;
+    display: flex;
+    // container
+    .loginContainer {
+        padding: 6rem;
+        margin: auto;
+        width: 100%;
+        max-width: 52rem;
+        min-height: 60rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: radial-gradient( ellipse at left bottom, rgba(22, 24, 47, 1) 0%, rgba(38, 20, 72, 0.9) 59%, rgba(17, 27, 75, 0.9) 100%);
+        box-shadow: 0 5rem 7rem -2rem $box-shadow-black;
+        label {
+            color: $white-color;
+            margin: 1.4rem 0;
+            display: block;
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1.7em;
+            padding: 1rem;
+            background: $input-background-dark-color;
+            color: $white-color;
+            letter-spacing: 1px;
+        }
+        // btn
+        .btnContainer {
+            width: 100%;
+            padding: 2.4rem 0;
+            p {
+                margin: 11.4rem 0 0 0;
+                text-align: right;
+                color: $white-color;
+                span {
+                    color: $yellow-color;
+                    font-weight: 50rem;
+                    letter-spacing: 0.5px;
+                    margin-left: 0.5rem;
+                    cursor: pointer;
+                    transition: all 400ms ease-in-out;
+                    &:hover {
+                        color: $red-color;
+                    }
+                }
+            }
+        }
+        // error
+        .errorMsg {
+            color: $red-color;
+            font-size: 1.8rem;
+        }
+    }
+}
