@@ -24,15 +24,13 @@ const Login = ({
         <label>Password</label>
         <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
         {passwordError && <p className='errorMsg'>{passwordError}</p>}
-        {hasAccount ? (
-          <></>
-        ) : (
+        {!hasAccount ? (
           <>
             <label>Phone</label>
-            <input type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+            <input type='text' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
             {phoneNumberError && <p className='errorMsg'>{phoneNumberError}</p>}
           </>
-        )}
+        ) : null}
 
         <div className='btnContainer'>
           {hasAccount ? (

@@ -1,0 +1,48 @@
+@import '../../style/core/variables';
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem 4rem;
+    width: 100%;
+    max-width: 40rem;
+    overflow: hidden;
+    .title {
+        font-size: 1.8rem;
+        color: $white-color;
+        font-weight: 700;
+    }
+    .qrcode {
+        padding: 1rem 4rem;
+        width: 100%;
+        max-width: 40rem;
+        overflow: hidden;
+        margin: 1rem auto;
+        img {
+            padding: 0.5rem;
+            max-width: 40rem;
+            height: auto;
+            padding: 1rem;
+            border: 1px solid $background-gray-color;
+        }
+    }
+    .text-content {
+        margin-top: 1rem;
+        .wallet {
+            color: $qrcode-wallet-color;
+            font-size: 1.4rem;
+        }
+        .terminal-amount {
+            margin-top: 1rem;
+            .bill {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.4rem;
+                margin: 0.5rem 0;
+                color: $white-color;
+            }
+        }
+    }
+}

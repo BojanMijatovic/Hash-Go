@@ -115,7 +115,7 @@ const App = () => {
   return (
     <div className='App'>
       {user ? (
-        <Terminal user={user} handleLogOut={handleLogOut} />
+        <Terminal user={user} handleLogOut={handleLogOut} email={user.email} />
       ) : (
         <Login
           email={email}
