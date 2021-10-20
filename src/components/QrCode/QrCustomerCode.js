@@ -1,13 +1,33 @@
 import './QrCustomerCode.styles.scss';
 import { useEffect, useState } from 'react';
 import QrCode from 'qrcode';
+import ClipLoader from 'react-spinners/ClipLoader';
 
-const QrCustomerCode = ({ terminalValue }) => {
+const QrCustomerCode = ({ terminalValue, bitcoinPrice }) => {
   const [qrCode, setQrCode] = useState('');
+  const [totalPriceInBTC, setTotalPriceInBTC] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     QrCode.toDataURL(terminalValue).then(setQrCode);
+    // wait for calculate the total price in BTC
+
+    const interval = setInterval(() => {
+      setTotalPriceInBTC(terminalValue / bitcoinPrice);
+    }, 500);
+    return () => clearInterval(interval);
+  }, [terminalValue, bitcoinPrice]);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 20000);
   }, []);
+
+  const cancelLoading = () => {
+    setLoading(false);
+  };
 
   return (
     <section className='section'>
@@ -19,19 +39,21 @@ const QrCustomerCode = ({ terminalValue }) => {
         <p className='wallet'>loremIpsumDolo231ons1ecteturRqewqeqws123</p>
         <div className='terminal-amount'>
           <div className='bill'>
-            <span>Terminal amount:</span> <span>15151353 $</span>
+            <span>Your bill:</span> <span>{terminalValue} DIN</span>
           </div>
           <div className='bill'>
-            <span>Terminal amount:</span> <span>15151353 $</span>
+            <span>Bitcoin price:</span> <span>{bitcoinPrice} DIN</span>
           </div>
         </div>
       </div>
-      <div className='loading'>loading....</div>
+      <div className='loading'>{loading ? <ClipLoader loading={loading} size={80} color={`#F5A623`} /> : ''}</div>
       <div className='total-priceInBitcoin'>
-        <p className='total-bill'>Total price in Bitcoin</p>
+        <p className='total-bill'>Total price in Bitcoin: {totalPriceInBTC} BTC</p>
       </div>
       <div className='btnContainer'>
-        <button className='btn'>Cancel</button>
+        <button className='btn' onClick={cancelLoading}>
+          Cancel
+        </button>
       </div>
     </section>
   );
