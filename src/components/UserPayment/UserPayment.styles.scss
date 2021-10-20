@@ -1,0 +1,57 @@
+@import '../../style/core/variables';
+.user-payment {
+    margin: 2.5rem 0;
+    .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $white-color;
+        margin-bottom: 1.4rem;
+    }
+    .user-img {
+        margin: 1rem 0;
+        img {
+            color: green;
+        }
+    }
+    .user-amount {
+        background-color: rgba($box-shadow-black, $alpha: 0.4);
+        margin: 2rem 0;
+        color: $white-color;
+        font-size: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.8rem;
+        .expected-amount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            span {
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin: 0 2rem;
+            }
+        }
+    }
+    .btn {
+        margin-top: 5rem;
+        button {
+            width: 100%;
+            height: 5rem;
+            border-radius: 0.8rem;
+            background-color: $box-shadow-black;
+            color: $white-color;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border: none;
+            text-transform: uppercase;
+            margin: 0 auto;
+            &:hover {
+                background-color: $box-shadow-black;
+                color: $white-color;
+            }
+        }
+    }
+}
