@@ -25,7 +25,7 @@ const QrCustomerCode = ({ terminalValue, bitcoinPrice }) => {
     setTimeout(() => {
       setLoading(false);
       setPaymentStatus(true);
-    }, 20000);
+    }, 25000);
   }, []);
 
   const cancelLoading = () => {
