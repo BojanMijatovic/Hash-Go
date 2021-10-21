@@ -13,9 +13,9 @@ Zadatak sam izvršio na sledeći način:
     "react-dom": "17.0.2",
     "react-router-dom": "5.3.0",
 
-### Proces te tekao na sledeći način:
+### Proces je tekao na sledeći način:
 
-Prvo sam kreirao komponentu za prijavu korisnika Login.js i implementirao firebase kao backend deo i koristio za autentifikaciju korisnika uz pomoć metoda, i samo odjavljivanje istih.
+Prvo sam kreirao komponentu za prijavu i registraciju korisnika Login.js i implementirao firebase kao backend deo i koristio za autentifikaciju korisnika uz pomoć metoda, i samo odjavljivanje istih.
 
     auth()
     createUserWithEmailAndPassword
@@ -30,15 +30,15 @@ Zatim sam napravio scenario kako je transakcija bila uspešna.
 
 ### Aplikacija je testirana na google i mozilla pretraživačima u svim trenutno koristećim rezolucijama
 
-### od uredjaja testirana je na laptopu , tabletu i mobilnom telefonu
+Od uredjaja testirana je na laptopu , tabletu i mobilnom telefonu
 
 Što se tiče dizajna, bio sam malo slobodniji pa sam improvizovao neki, nije najbolje što sam mogao :)
 Koristio sam se scss metodom za pisanje.  
 U dizajnu sam gledao da napravim komponente koje bih mogao na više mesta ponovo koristiti. i tako sam i gledao da napravim strukturu.
 
-## Za testiranje možete koristiti
+### Za testiranje možete koristiti : username test@test.com sa šifrom 123456
 
-username test@test.com sa šifrom 123456
+ili registrovati novog korisnika
 
 ### sama aplikacija i live na linku https://hash-go-bojanmijatovic.vercel.app/
 
