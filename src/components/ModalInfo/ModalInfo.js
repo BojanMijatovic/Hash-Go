@@ -11,7 +11,7 @@ const ModalInfo = () => {
   return (
     <>
       <button className='btn-modal' onClick={toggleModal}>
-        <img src='https://img.icons8.com/fluency/48/000000/info-squared.png' />
+        <img src='https://img.icons8.com/fluency/48/000000/info-squared.png' alt='modal' />
         Uputstvo
       </button>
       {modal && (
@@ -32,7 +32,7 @@ const ModalInfo = () => {
               </p>
             </div>
             <button className='close-modal' onClick={toggleModal}>
-              <img src='https://img.icons8.com/fluency/48/000000/close-pane.png' />
+              <img src='https://img.icons8.com/fluency/48/000000/close-pane.png' alt='modal' />
             </button>
           </div>
         </div>
