@@ -36,5 +36,10 @@ Zatim sam napravio scenario kako je transakcija bila uspešna.
 Koristio sam se scss metodom za pisanje.  
 U dizajnu sam gledao da napravim komponente koje bih mogao na više mesta ponovo koristiti. i tako sam i gledao da napravim strukturu.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Za testiranje možete koristiti
+
+username test@test.com sa šifrom 123456
+
+### sama aplikacija i live na linku https://hash-go-bojanmijatovic.vercel.app/
+
+Za dalje sugestije i pitanja možete mi slobodno pisati na bojan.freelance.jobs@gmail.com
