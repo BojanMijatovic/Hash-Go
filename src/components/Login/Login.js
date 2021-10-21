@@ -1,5 +1,5 @@
 import './Login.styles.scss';
-import Modal from '../Modal/Modal';
+import ModalInfo from '../ModalInfo/ModalInfo';
 
 const Login = ({
   email,
@@ -19,13 +19,16 @@ const Login = ({
   return (
     <section className='login'>
       <form className='loginContainer' onSubmit={(e) => e.preventDefault()}>
-        <Modal />
+        <ModalInfo />
+
         <label>Korisničko ime</label>
         <input type='text' autoFocus value={email} onChange={(e) => setEmail(e.target.value)} />
         {emailError && <p className='errorMsg'>{emailError}</p>}
+
         <label>Šifra</label>
         <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
         {passwordError && <p className='errorMsg'>{passwordError}</p>}
+
         {!hasAccount ? (
           <>
             <label>Telefon</label>
@@ -40,7 +43,6 @@ const Login = ({
               <button className='loginBtn' onClick={handleLogin}>
                 Prijava
               </button>
-
               <p>
                 Nemaš nalog ?<span onClick={() => setHasAccount(!hasAccount)}>Registruj se</span>
               </p>

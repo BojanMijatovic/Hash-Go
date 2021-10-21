@@ -52,6 +52,7 @@ const Terminal = ({ handleLogOut, email }) => {
           Odjavi se
         </button>
       </nav>
+
       {showTerminal ? (
         <div className='container'>
           <div className='display-amount'>{value ? value : 0}</div>
