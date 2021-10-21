@@ -1,4 +1,5 @@
 import './Login.styles.scss';
+import Modal from '../Modal/Modal';
 
 const Login = ({
   email,
@@ -18,15 +19,16 @@ const Login = ({
   return (
     <section className='login'>
       <form className='loginContainer' onSubmit={(e) => e.preventDefault()}>
-        <label>Username</label>
+        <Modal />
+        <label>Korisničko ime</label>
         <input type='text' autoFocus value={email} onChange={(e) => setEmail(e.target.value)} />
         {emailError && <p className='errorMsg'>{emailError}</p>}
-        <label>Password</label>
+        <label>Šifra</label>
         <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
         {passwordError && <p className='errorMsg'>{passwordError}</p>}
         {!hasAccount ? (
           <>
-            <label>Phone</label>
+            <label>Telefon</label>
             <input type='text' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
             {phoneNumberError && <p className='errorMsg'>{phoneNumberError}</p>}
           </>
@@ -36,19 +38,20 @@ const Login = ({
           {hasAccount ? (
             <>
               <button className='loginBtn' onClick={handleLogin}>
-                Sign in
+                Prijava
               </button>
+
               <p>
-                Don`t have account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
+                Nemaš nalog ?<span onClick={() => setHasAccount(!hasAccount)}>Registruj se</span>
               </p>
             </>
           ) : (
             <>
               <button className='loginBtn' onClick={handleSignUp}>
-                Sign up
+                Registruj se
               </button>
               <p>
-                Have account <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span>
+                Imaš nalog ?<span onClick={() => setHasAccount(!hasAccount)}>Prijavi se</span>
               </p>
             </>
           )}

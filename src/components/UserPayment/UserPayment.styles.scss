@@ -1,14 +1,16 @@
 @import '../../style/core/variables';
 .user-payment {
-    margin: 2.5rem 0;
+    margin-top: 6rem;
     .title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $white-color;
         margin-bottom: 1.4rem;
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $white-color;
+        }
     }
     .user-img {
-        margin: 1rem 0;
+        margin: 2.5rem 0;
         img {
             color: green;
         }
@@ -27,21 +29,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem;
+            padding: 1rem 0.5rem;
             span {
-                font-size: 1.4rem;
-                font-weight: 700;
-                margin: 0 2rem;
+                font-size: 1.2rem;
+                margin: 0.5rem;
             }
         }
     }
     .btn {
         margin-top: 5rem;
-        button {
-            width: 100%;
+        a {
+            width: 60%;
             height: 5rem;
             border-radius: 0.8rem;
-            background-color: $box-shadow-black;
+            padding: 1rem;
+            background-color: $button-color;
             color: $white-color;
             font-size: 1.4rem;
             font-weight: 700;

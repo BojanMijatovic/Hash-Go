@@ -1,0 +1,34 @@
+/* Extra small devices (landscape phones, 575px and up) */
+
+@mixin media-extra-small {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+
+/* Small devices (landscape phones, 575px and up) */
+
+@mixin media-small {
+    @media screen and (min-width: 321px) {
+        @content;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@mixin media-medium-1 {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 992px and up) */
+
+@mixin media-medium-2 {
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}

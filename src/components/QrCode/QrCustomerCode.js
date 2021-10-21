@@ -12,8 +12,8 @@ const QrCustomerCode = ({ terminalValue, bitcoinPrice }) => {
 
   useEffect(() => {
     QrCode.toDataURL(terminalValue).then(setQrCode);
-    // wait for calculate the total price in BTC
 
+    // wait for calculate the total price in BTC
     const interval = setInterval(() => {
       setTotalPriceInBTC(terminalValue / bitcoinPrice);
     }, 500);
@@ -25,7 +25,7 @@ const QrCustomerCode = ({ terminalValue, bitcoinPrice }) => {
     setTimeout(() => {
       setLoading(false);
       setPaymentStatus(true);
-    }, 2000);
+    }, 20000);
   }, []);
 
   const cancelLoading = () => {
@@ -35,10 +35,10 @@ const QrCustomerCode = ({ terminalValue, bitcoinPrice }) => {
   return (
     <section className='section'>
       {paymentStatus ? (
-        <UserPayment />
+        <UserPayment totalPriceInBTC={totalPriceInBTC} />
       ) : (
         <>
-          <h2 className='title'>Scan QR code</h2>
+          <h2 className='title'>Skeniraj QR kod</h2>
           <div className='qrcode'>
             <img src={qrCode} alt='qrcode' />
           </div>
@@ -46,21 +46,21 @@ const QrCustomerCode = ({ terminalValue, bitcoinPrice }) => {
             <p className='wallet'>loremIpsumDolo231ons1ecteturRqewqeqws123</p>
             <div className='terminal-amount'>
               <div className='bill'>
-                <span>Your bill:</span> <span>{terminalValue} DIN</span>
+                <span>Iznos računa:</span> <span>{terminalValue} DIN</span>
               </div>
               <div className='bill'>
-                <span>Bitcoin price:</span> <span>{bitcoinPrice} DIN</span>
+                <span>Cena bitcoina:</span> <span>{bitcoinPrice} DIN</span>
               </div>
             </div>
           </div>
-          <div className='loading'>{loading ? <ClipLoader loading={loading} size={80} color={`#F5A623`} /> : ''}</div>
+          <div className='loading'>{loading ? <ClipLoader loading={loading} size={50} color={`#F5A623`} /> : ''}</div>
           <div className='total-priceInBitcoin'>
-            <p className='total-bill'>Total price in Bitcoin: {totalPriceInBTC} BTC</p>
+            <p className='total-bill'>Ukupno: {totalPriceInBTC} BTC</p>
           </div>
           <div className='btnContainer'>
-            <button className='btn' onClick={cancelLoading}>
-              Cancel
-            </button>
+            <a href='/' className='btn' onClick={cancelLoading}>
+              Odustani
+            </a>
           </div>
         </>
       )}

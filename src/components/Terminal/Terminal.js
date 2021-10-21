@@ -47,9 +47,9 @@ const Terminal = ({ handleLogOut, email }) => {
   return (
     <section className='terminal'>
       <nav className='nav'>
-        <h2 className='username'>Welcome {name}</h2>
+        <h2 className='username'>Dobrodošao {name}</h2>
         <button className='btn' onClick={handleLogOut}>
-          Logout
+          Odjavi se
         </button>
       </nav>
       {showTerminal ? (
@@ -63,7 +63,7 @@ const Terminal = ({ handleLogOut, email }) => {
             </button>
 
             <button className='operator' disabled={true}>
-              BITCoin
+              <img src='https://img.icons8.com/color/48/000000/bitcoin--v1.png' alt='bitcoin' />
             </button>
             <button className='operator' onClick={() => setValue('')}>
               CE
@@ -72,7 +72,7 @@ const Terminal = ({ handleLogOut, email }) => {
 
           <div className='btnContainer'>
             <button className='btn' onClick={() => testFunction()}>
-              pay
+              PLATI
             </button>
           </div>
         </div>

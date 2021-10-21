@@ -1,3 +1,4 @@
+@import '../core/variables';
 button {
     border: none;
     outline: none;
@@ -8,4 +9,8 @@ button {
     letter-spacing: 1px;
     background: $background-purple-color;
     cursor: pointer;
+}
+
+.btn-primary {
+    background: $button-color;
 }
